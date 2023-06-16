@@ -9,8 +9,6 @@ const Tweets = () => {
   const [page, setPage] = useState(1);
   // const [filter, setFilter] = useState('');
 
-  // console.log(tweets);
-
   useEffect(() => {
     const controller = new AbortController();
     const signal = controller.signal;
