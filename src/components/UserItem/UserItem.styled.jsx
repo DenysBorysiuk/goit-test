@@ -62,7 +62,7 @@ export const Avatar = styled.div`
 `;
 
 export const Text = styled.span`
-  font-style: normal;
+  font-family: "Montserrat";
   font-weight: 500;
   font-size: 20px;
   line-height: calc(24 / 20);
@@ -81,12 +81,13 @@ export const Button = styled.button`
   width: 196px;
   height: 50px;
   margin-top: 26px;
+  font-family: "Montserrat";
   font-weight: 600;
   font-size: 18px;
   line-height: calc(22 / 18);
   text-transform: uppercase;
   color: #373737;
-  background-color: #ebd8ff;
+  background-color: ${(props) => (props.isFollowing ? "#5CD3A8" : "#ebd8ff")};
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   border: none;

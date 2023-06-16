@@ -4,11 +4,13 @@ export const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   width: 196px;
   height: 50px;
   margin-bottom: 48px;
   margin-left: auto;
   margin-right: auto;
+  font-family: "Montserrat";
   font-weight: 600;
   font-size: 18px;
   line-height: calc(22 / 18);

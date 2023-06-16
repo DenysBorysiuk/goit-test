@@ -8,6 +8,7 @@ const UserList = ({ users }) => {
       {users.map(({ id, tweets, followers, avatar }) => (
         <UserItem
           key={id}
+          id={id}
           avatar={avatar}
           tweets={tweets}
           followers={followers}

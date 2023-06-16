@@ -27,6 +27,7 @@ export const Link = styled(NavLink)`
   border-radius: 10px;
   text-decoration: none;
   color: #373737;
+  font-family: "Montserrat";
   font-weight: 500;
   font-size: 18px;
   line-height: calc(22 / 18);
