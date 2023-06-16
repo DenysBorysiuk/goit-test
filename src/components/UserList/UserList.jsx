@@ -2,10 +2,10 @@ import PropTypes from "prop-types";
 import UserItem from "../UserItem/UserItem";
 import { List } from "./UserList.styled";
 
-const UserList = ({ tweets }) => {
+const UserList = ({ users }) => {
   return (
     <List>
-      {tweets.map(({ id, tweets, followers, avatar }) => (
+      {users.map(({ id, tweets, followers, avatar }) => (
         <UserItem
           key={id}
           avatar={avatar}
@@ -20,7 +20,7 @@ const UserList = ({ tweets }) => {
 export default UserList;
 
 UserList.propTypes = {
-  tweets: PropTypes.arrayOf(
+  users: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       avatar: PropTypes.string.isRequired,

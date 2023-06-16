@@ -5,9 +5,9 @@ import LoadMoreBtn from "../components/LoadMoreBtn/LoadMoreBtn";
 import ControlsBar from "../components/ControlsBar/ControlsBar";
 
 const Tweets = () => {
-  const [tweets, setTweets] = useState([]);
+  const [users, setUsers] = useState([]);
   const [page, setPage] = useState(1);
-  // const [filter, setFilter] = useState('');
+  // const [filter, setFilter] = useState('show all');
 
   useEffect(() => {
     const controller = new AbortController();
@@ -17,7 +17,7 @@ const Tweets = () => {
       try {
         const data = await getTweets(page, signal);
 
-        setTweets((prev) => [...prev, ...data]);
+        setUsers((prev) => [...prev, ...data]);
       } catch (error) {
         if (error.name === "CanceledError") return;
         console.log(error);
@@ -38,7 +38,7 @@ const Tweets = () => {
   return (
     <div>
       <ControlsBar />
-      <UserList tweets={tweets} />
+      <UserList users={users} />
 
       {page === 4 ? null : <LoadMoreBtn loadMore={loadMore} />}
     </div>
